@@ -1,0 +1,3 @@
+ajustesGenerales:
+    pattern:  /sistema
+    defaults: { _controller: AjustesGeneralesBundle:AjustesGenerales:sistema }

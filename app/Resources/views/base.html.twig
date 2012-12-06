@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width"/>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <title>{% block title %}{% endblock %}</title>
+        {% block estilos %}
+            <link rel="stylesheet" href="{{ asset( 'css/normalize.css') }}"/>
+            <link rel="stylesheet" href="{{ asset( 'css/base.css') }}"/>
+        {% endblock %}
+        
+    </head>
+    <body>
+        <div class="contenidoFull" id="contenedorHeader">
+            <div class="contenidoFull" id="tela">
+                <header class="contenidoCentrado">
+                    <div class="bienvenida">
+                        <h1>Bienvenido</h1>
+                        <p class="nombre">Victor Puello G.</p>
+                    </div>
+                </header>
+            </div>
+        </div>
+        {% block menu_lateral %}
+            
+        {% endblock %}
+        <div class="contenidoCentrado" >
+            <div id="Fecha">
+                <label><span>8:09 PM</span><p>Viernes 24 de Sep.</p></label>
+            </div>
+            <div id="ContAvatar">
+                <img src="{{ asset('images/perfil.jpg') }}" />
+            </div>
+        </div>
+        <div class="contenidoCentrado" id="ContFecha">
+            <div id="contenedorMetro">
+                {% block menu_principal %}
+
+                {% endblock %}    
+            </div>
+            <div id="ContenedorNotf"></div>
+        </div>
+        <footer class="contenidoCentrado">
+            {% block mod_MenuInferior%}
+            {% endblock %}  
+        </footer>
+        {% block javascripts %}
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+            <script src="{{ asset('js/modernizr.foundation.js') }}"></script>
+            <script type="text/javascript" src="{{asset('js/ajax.js')}}"></script>
+        {% endblock %}
+    </body>
+</html>

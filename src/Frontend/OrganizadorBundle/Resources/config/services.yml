@@ -1,0 +1,7 @@
+parameters:
+#    organizador.example.class: Frontend\OrganizadorBundle\Example
+
+services:
+#    organizador.example:
+#        class: %organizador.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

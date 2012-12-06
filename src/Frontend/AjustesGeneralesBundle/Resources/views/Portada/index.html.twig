@@ -1,0 +1,24 @@
+{% extends '::base.html.twig' %}
+{% block title %}Bienvenido || Administrador{% endblock %}
+{% block menu_principal %}
+<div id="ContAjax">
+    <link rel="stylesheet" href="{{ asset('css/MenuAdmin.css') }}"/> 
+    	<div id="CsuperiorIzq">
+    	  	<a href="#" class="ajax">
+                <div id="confSitema" class="boxMPA caja1MPA azul">
+    	  			<p class="textoMPA TexLeft">Ajustes </br> del Sistema</p>
+                </div>
+    	  	</a>
+    	   	<div id="Estaditicas" class="boxMPA caja2MPA rojo">
+    	  		<a href="#">
+                    <p class="textoMPA TexCentro">Estadisticas</p>
+                </a>
+    	   	</div>
+    	   	<div id="planEstudios" class="boxMPA caja2MPA lima">
+    	   		<a href="#">
+                    <p class="textoMPA TexLeft">Plan </br>de estudios</p>
+                </a>
+    	   	</div>
+   	</div>
+</div> 
+{% endblock %}

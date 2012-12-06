@@ -1,0 +1,7 @@
+parameters:
+#    ajustes_generales.example.class: Frontend\AjustesGeneralesBundle\Example
+
+services:
+#    ajustes_generales.example:
+#        class: %ajustes_generales.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

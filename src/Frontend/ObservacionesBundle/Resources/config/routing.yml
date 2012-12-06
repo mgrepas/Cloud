@@ -1,0 +1,3 @@
+observaciones_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ObservacionesBundle:Default:index }

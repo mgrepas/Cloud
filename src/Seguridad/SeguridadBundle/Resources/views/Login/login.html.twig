@@ -1,0 +1,27 @@
+{% extends '::base.html.twig' %}
+{% block title %}Bienvenido{% endblock %}
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset( "css/foundation.css") }}">
+	<link rel="stylesheet" href="{{ asset( "css/base.css") }}">
+{% endblock %}
+{% block body %}
+	<div id="loginheader">
+		<div class="contenidoCentrado">
+				<div class="bienvenida">
+					<p>Bienvenidos a la </br>Plataforma Cloud School</p>
+				</div>
+		</div>
+	</div>
+		<div class="contenidoCentrado">
+			<div class="mod-aut">
+				{% block ModuloAut %}
+
+				{% endblock %}
+			</div>
+			<div class="mod-login">
+				{% block ModuloLogin %}
+				
+				{% endblock %}
+			</div>
+		</div>
+{% endblock %}

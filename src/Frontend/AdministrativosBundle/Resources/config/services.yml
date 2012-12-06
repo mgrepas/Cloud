@@ -1,0 +1,7 @@
+parameters:
+#    administrativos.example.class: Frontend\AdministrativosBundle\Example
+
+services:
+#    administrativos.example:
+#        class: %administrativos.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

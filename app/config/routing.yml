@@ -1,0 +1,52 @@
+welcome:
+    pattern:  /
+    defaults: { _controller: AjustesGeneralesBundle:Portada:index }
+
+seguridad:
+    resource: "@SeguridadBundle/Resources/config/routing.yml"
+    prefix:   /
+
+super_admin:
+    resource: "@SuperAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+observaciones:
+    resource: "@ObservacionesBundle/Resources/config/routing.yml"
+    prefix:   /
+
+organizador:
+    resource: "@OrganizadorBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ajustes_generales:
+    resource: "@AjustesGeneralesBundle/Resources/config/routing.yml"
+    prefix:   /
+
+estadisticas:
+    resource: "@EstadisticasBundle/Resources/config/routing.yml"
+    prefix:   /
+
+aulavirtual:
+    resource: "@AulavirtualBundle/Resources/config/routing.yml"
+    prefix:   /
+
+notificaciones:
+    resource: "@NotificacionesBundle/Resources/config/routing.yml"
+    prefix:   /
+
+estudiante:
+    resource: "@EstudianteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+docente:
+    resource: "@DocenteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+administrativos:
+    resource: "@AdministrativosBundle/Resources/config/routing.yml"
+    prefix:   /
+
+# Internal routing configuration to handle ESI
+#_internal:
+#    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#    prefix:   /_internal
