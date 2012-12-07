@@ -14,6 +14,6 @@ class AjustesGeneralesController extends Controller
         return $this->render('AjustesGeneralesBundle:AjustesGenerales:ajustes1.html.twig', array());
     }
     public function infogeneralAction(){
-        
+        return $this->render('AjustesGeneralesBundle:AjustesGenerales:infogeneral.html.twig',array());
     }
 }
