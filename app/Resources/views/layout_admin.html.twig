@@ -6,11 +6,12 @@
     	<div id="CsuperiorIzq">
     	  	<a href="{{path('ajustesGenerales')}}" class="ajax">
                 <div id="confSitema" class="boxMPA caja1MPA azul">
-    	  			<p class="textoMPA TexLeft">Ajustes <br/> del Sistema</p>
+                   <img src="{{ asset('images/botones/b_ajustes.png') }}">
+                   <p class="textoMPA TexLeft">Ajustes <br/> del Sistema</p>
                 </div>
-    	  	</a>
-    	   	<div id="Estaditicas" class="boxMPA caja2MPA rojo">
-    	  		<a href="#" class="ajax">
+            </a>
+            <div id="Estaditicas" class="boxMPA caja2MPA rojo">
+                <a href="#" class="ajax">
                     <p class="textoMPA TexCentro">Estadisticas</p>
                 </a>
     	   	</div>
@@ -63,4 +64,8 @@
         </div>
 </div>
 <div id="tercernivel">{% block ejemplo %}{% endblock %}</div> 
+{% endblock %}
+{% block javascripts %}
+    {{parent()}}
+    <script type="text/javascript" src="{{asset('js/EfectosMenu.js')}}"></script>
 {% endblock %}
