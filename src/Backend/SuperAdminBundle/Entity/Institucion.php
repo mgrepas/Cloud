@@ -56,24 +56,6 @@ class Institucion
      * @ORM\Column(name="fax", type="string", length=30)
      */
     private $fax;
-    
-    /**
-     * 
-     * @ORM\Column(name="nit", type="string", length=30)
-     */
-     private $nit;
-     
-     /**
-     * 
-     * @ORM\Column(name="dane", type="string", length=30)
-     */
-     private $dane;
-     
-     /**
-     * 
-     * @ORM\Column(name="men", type="string", length=30)
-     */
-     private $men;
 
     /**
      * @var string $email
@@ -110,9 +92,21 @@ class Institucion
      
      /**
      * 
+     * @ORM\Column(name="nivel_academico", type="string", length=255)
+     */
+     private $nivel_academico;
+     
+     /**
+     * 
      * @ORM\Column(name="foto", type="string", length=255)
      */
      private $foto;
+     
+     /**
+     * 
+     * @ORM\ManyToOne(targetEntity="Backend\SuperAdminBundle\Entity\DatosLegales")
+     */
+     private $datoslegales;
 
 
     
@@ -384,74 +378,49 @@ class Institucion
         return $this->ciudad;
     }
 
-   
-
     /**
-     * Set nit
+     * Set nivel_academico
      *
-     * @param string $nit
+     * @param string $nivelAcademico
      * @return Institucion
      */
-    public function setNit($nit)
+    public function setNivelAcademico($nivelAcademico)
     {
-        $this->nit = $nit;
+        $this->nivel_academico = $nivelAcademico;
     
         return $this;
     }
 
     /**
-     * Get nit
+     * Get nivel_academico
      *
      * @return string 
      */
-    public function getNit()
+    public function getNivelAcademico()
     {
-        return $this->nit;
+        return $this->nivel_academico;
     }
 
     /**
-     * Set dane
+     * Set datoslegales
      *
-     * @param string $dane
+     * @param Backend\SuperAdminBundle\Entity\DatosLegales $datoslegales
      * @return Institucion
      */
-    public function setDane($dane)
+    public function setDatoslegales(\Backend\SuperAdminBundle\Entity\DatosLegales $datoslegales = null)
     {
-        $this->dane = $dane;
+        $this->datoslegales = $datoslegales;
     
         return $this;
     }
 
     /**
-     * Get dane
+     * Get datoslegales
      *
-     * @return string 
+     * @return Backend\SuperAdminBundle\Entity\DatosLegales 
      */
-    public function getDane()
+    public function getDatoslegales()
     {
-        return $this->dane;
-    }
-
-    /**
-     * Set men
-     *
-     * @param string $men
-     * @return Institucion
-     */
-    public function setMen($men)
-    {
-        $this->men = $men;
-    
-        return $this;
-    }
-
-    /**
-     * Get men
-     *
-     * @return string 
-     */
-    public function getMen()
-    {
-        return $this->men;
+        return $this->datoslegales;
     }
 }

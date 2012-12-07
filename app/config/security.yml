@@ -19,7 +19,7 @@ security:
             security: false
 
         secured_area:
-            pattern:    ^/
+            pattern:    ^/hola
 #            http_basic:
 #                realm: "Introduzca Usuario y Contraseña"
             form_login:
@@ -32,4 +32,4 @@ security:
                 target: /
 
     access_control:
-        - { path: ^/admin/*, roles: [ROLE_ADMIN, ROLE_SUPER_ADMIN] }
+        # - { path: ^/admin/*, roles: [ROLE_ADMIN, ROLE_SUPER_ADMIN] }
