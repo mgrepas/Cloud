@@ -140,6 +140,21 @@ header {
 .bienvenida {
   width: 600px;
 }
+.botonRegresar {
+  float: left;
+  padding: 0 0.5em;
+  max-width: 3em;
+}
+.botonRegresar a {
+  color: #fff;
+  font-family: "Segoe UI light";
+  font-size: 1em;
+}
+.botonRegresar a img {
+  display: block;
+  padding: 1em 0 0 0;
+  width: 100%;
+}
 .nombre {
   color: #fff;
   font-family: "Champagne";

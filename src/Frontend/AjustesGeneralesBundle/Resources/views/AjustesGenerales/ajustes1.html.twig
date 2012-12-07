@@ -1,9 +1,30 @@
 {% extends "AjustesGeneralesBundle::layout_admin_ajax.html.twig" %}
-{% block title %}Ajustes Generales || Administrador{% endblock %}
+{% block title %}Ajustes Generales || MA1 {% endblock %}
+{% block estilos %} 
+	{{parent()}}
+    <link rel="stylesheet" href="{{ asset( 'css/ma1.css') }}"/>
+{% endblock %}
 {% block ejemplo %}
-
-    <a href="{{path('infogeneral')}}">Informaci&oacute;n general</a>
-    <a href="#">Gesti&oacute;n de Sedes</a>
-    <a href="#">Otros Ajustes</a>
-
+	<div id="bloqueCgenerales" class="azul">
+				<div id="contenidoIzq">
+					<div class="botonRegresar">
+						{% block back %}
+							<a href="#" class="ajax"><img src="{{ asset('images/b_atras.png') }}"></a>
+						{% endblock %}
+					</div>
+					<div id="ContTitulo">
+						<p>Ajustes del sistema</p>
+					</div>
+				</div>
+				<div id="contenidoDer">
+					<div id="menuAux">
+						<ul>
+							<li><a href="#" class="ajax" >Ajustes Generales</a></li>
+							<li><a href="#" class="ajax" >Ajustes de Evaluaci&oacute;n</a></li>
+							<li><a href="#" class="ajax" >Criterios Academicos</a></li>
+						</ul>
+					</div>
+					<div class="Inicio" ><a href="#" class="ajax">Inicio</a></div>
+				</div>
+			</div>
 {% endblock %}
