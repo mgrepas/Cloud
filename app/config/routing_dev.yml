@@ -1,6 +1,6 @@
 welcome:
     pattern:  /
-    defaults: { _controller: AjustesGeneralesBundle:Portada:index }
+    defaults: { _controller: AjustesGeneralesBundle:Portada:portada }
 
 #_welcome:
  #   pattern:  /

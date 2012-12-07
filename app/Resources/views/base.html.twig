@@ -28,7 +28,7 @@
             </div>
         </div>
         {% block menu_lateral %}
-            
+            {% render "AjustesGeneralesBundle:Portada:menulateral" %}
         {% endblock %}
         <div class="contenidoCentrado" >
             <div id="Fecha">
@@ -48,6 +48,7 @@
         </div>
         <footer class="contenidoCentrado">
             {% block mod_MenuInferior%}
+                {% render "AjustesGeneralesBundle:Portada:menucolores" %}
             {% endblock %}  
         </footer>
         {% block javascripts %}

@@ -1,6 +1,6 @@
 welcome:
     pattern:  /
-    defaults: { _controller: AjustesGeneralesBundle:Portada:index }
+    defaults: { _controller: AjustesGeneralesBundle:Portada:portada }
 
 seguridad:
     resource: "@SeguridadBundle/Resources/config/routing.yml"
