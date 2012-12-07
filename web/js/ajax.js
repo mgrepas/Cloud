@@ -1,4 +1,5 @@
-$(window).load(doAjax);
+$(window).on('load',doAjax);
+
 function doAjax()
 {
     $('#ContAjax').on('click','.ajax',function(e){
@@ -14,7 +15,7 @@ function doAjax()
                 var contenido=$('#aux').find('#tercernivel').html();
                 console.log(titulo);
                 console.log(contenido);
-                $('#aux').remove();
+                console.log(e);
                 $('#ContAjax').html(contenido);
                 window.history.pushState(null, titulo, enlace);
             },

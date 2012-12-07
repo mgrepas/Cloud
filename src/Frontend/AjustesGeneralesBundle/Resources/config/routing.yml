@@ -1,3 +1,7 @@
 ajustesGenerales:
     pattern:  /sistema
     defaults: { _controller: AjustesGeneralesBundle:AjustesGenerales:sistema }
+
+infogeneral:
+    pattern:  /sistema/infogeneral
+    defaults: { _controller: AjustesGeneralesBundle:AjustesGenerales:infogeneral }
