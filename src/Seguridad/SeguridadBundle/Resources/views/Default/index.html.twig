@@ -1,1 +1,7 @@
-Hello {{ name }}!
+ <form action="{{ path('login_check') }}" method="post">
+                <ol>
+                    <li><label for="username">Usuario:</label><input id="username" type="text" name="_username" value="{{ last_username }}"/> </li>
+                    <li><label for="password">Contrase&ntilde;a:</label><input id="password" type="password" name="_password"/> </li>
+                </ol>
+                 <p><input type="submit" name="login" value="Ingresar"/><input type="button" value="Limpiar" /></p>                
+            </form>
