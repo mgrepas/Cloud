@@ -1,0 +1,9 @@
+{% extends '::base.html.twig' %}
+{% block title %}Bienvenido || Administrador{% endblock %}
+{% block menu_principal %}
+	<div id="tercernivel">{% block ejemplo %}{% endblock %}</div> 
+{% endblock %}
+{% block javascripts %}
+    {{parent()}}
+    <script type="text/javascript" src="{{asset('js/EfectosMenu.js')}}"></script>
+{% endblock %}

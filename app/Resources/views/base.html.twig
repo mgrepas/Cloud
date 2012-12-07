@@ -22,7 +22,7 @@
                 <header class="contenidoCentrado">
                     <div class="bienvenida">
                         <h1>Bienvenido</h1>
-                        <p class="nombre">Victor Puello G.</p>
+                        <p class="nombre">Oscar Bertel P.</p>
                     </div>
                 </header>
             </div>
@@ -32,7 +32,8 @@
         {% endblock %}
         <div class="contenidoCentrado" id="contReloj" >
             <div id="Fecha">
-                <label><span>8:09 PM</span><p>Viernes 24 de Sep.</p></label>
+                <label><span>8:09 PM</span><p>Viernes 24 de Sep. </p></label>
+                <img src="{{asset('images/loading.gif')}}" height="70%" style="margin-top: 18px;" id="loading" />
             </div>
             <div id="ContAvatar">
                 <img src="{{ asset('images/perfil.jpg') }}" />
@@ -44,7 +45,11 @@
 
                 {% endblock %}    
             </div>
-            <div id="ContenedorNotf"></div>
+            <div id="ContenedorNotf">
+            {% block notificaciones %}
+                {% render "NotificacionesBundle:Notificaciones:notificaciones" %}
+            {% endblock %}
+            </div>
         </div>
         <footer class="contenidoCentrado">
             {% block mod_MenuInferior%}
