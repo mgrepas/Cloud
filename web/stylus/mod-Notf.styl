@@ -22,8 +22,8 @@ Blanco2= rgb(213,213,213)
 		text-align center
 .Box-ntf
 	cursor pointer
-	background-color Azul
-	height 7em
+	background-color Azul !important
+	height 6.5em
 	margin 0 auto .25em
 	overflow hidden
 	padding .25em
@@ -36,6 +36,7 @@ Blanco2= rgb(213,213,213)
 		height 100%
 		overflow hidden
 		padding-bottom 3em
+		position relative
 		text-overflow ellipsis
 		transition all 0.2s ease
 		vertical-align top
@@ -43,21 +44,22 @@ Blanco2= rgb(213,213,213)
 		width 100%
 		h3
 			font-weight normal
-			margin 0 auto .25em
+			margin 0 auto .15em
 			width 95%
 		h4,p
 			color Blanco2
-			line-height 1.1
-			margin 0 auto .25em
+			line-height 1
+			margin 0 auto .15em
 			font-weight normal
 			width 95%
 	.estaticos
 		background-color transparent
 		bottom 0
 		left 0
-		max-height 30px
+		min-height 30px
 		position absolute
 		right 0
+		*zoom 1
 		.fecha
 			bottom 0
 			color Blanco
@@ -73,10 +75,10 @@ Blanco2= rgb(213,213,213)
 	-webkit-box-shadow inset 0px 0px 0px 3px rgba(58, 58, 58, .5)
 	box-shadow inset 0px 0px 0px 3px rgba(58, 58, 58, .5)*/
 .Box-ntf:nth-child(2n+1)
-	background-color Azul2
+	background-color Azul2 !important
 	.noticia h4
 		color Gris
 	.noticia p
 		color Gris
 .Box-ntf:nth-child(2)
-	background-color Azul3
+	background-color Azul3 !important
