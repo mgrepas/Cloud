@@ -49,16 +49,16 @@ class SeguridadController extends Controller
     public function redirectAction()
     {
         if( true === $this->get('security.context')->isGranted('ROLE_SUPER_ADMIN')) 
-            return $this->redirect($this->generateUrl('admincloud_home'));
+            return $this->redirect($this->generateUrl('welcome'));
         else
         if( true === $this->get('security.context')->isGranted('ROLE_ADMIN')) 
-            return $this->redirect($this->generateUrl('ma'));
+            return $this->redirect($this->generateUrl('welcome'));
         else
         if( true === $this->get('security.context')->isGranted('ROLE_DOCENTE')) 
-            return $this->redirect($this->generateUrl('md'));
+            return $this->redirect($this->generateUrl('welcome'));
         else
         if( true === $this->get('security.context')->isGranted('ROLE_USER')) 
-            return $this->redirect($this->generateUrl('me'));
+            return $this->redirect($this->generateUrl('welcome'));
         
         return $this->redirect($this->generateUrl('login'));
     }
