@@ -1,0 +1,93 @@
+<h1>Estudiante list</h1>
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Lugnacimiento</th>
+            <th>Fecnacimiento</th>
+            <th>Numero</th>
+            <th>Expedidaen</th>
+            <th>Barrio</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
+            <th>Celular</th>
+            <th>Email</th>
+            <th>Salud</th>
+            <th>Observacionesper</th>
+            <th>Colegioprocedencia</th>
+            <th>Sede</th>
+            <th>Observacionesacad</th>
+            <th>Numpersonas</th>
+            <th>Casa</th>
+            <th>Telefonocasa</th>
+            <th>Vivecon</th>
+            <th>Numhermanos</th>
+            <th>Celcasa</th>
+            <th>Nommadre</th>
+            <th>Ccmadre</th>
+            <th>Nompadre</th>
+            <th>Ccpadre</th>
+            <th>Nomacudiente</th>
+            <th>Ccacudiente</th>
+            <th>Direccioncasa</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('dashboard_estudiante_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.nombre }}</td>
+            <td>{{ entity.apellidos }}</td>
+            <td>{{ entity.lugNacimiento }}</td>
+            <td>{% if entity.fecNacimiento %}{{ entity.fecNacimiento|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{{ entity.numero }}</td>
+            <td>{{ entity.expedidaEn }}</td>
+            <td>{{ entity.barrio }}</td>
+            <td>{{ entity.direccion }}</td>
+            <td>{{ entity.telefono }}</td>
+            <td>{{ entity.celular }}</td>
+            <td>{{ entity.email }}</td>
+            <td>{{ entity.salud }}</td>
+            <td>{{ entity.observacionesPer }}</td>
+            <td>{{ entity.colegioProcedencia }}</td>
+            <td>{{ entity.sede }}</td>
+            <td>{{ entity.observacionesAcad }}</td>
+            <td>{{ entity.numPersonas }}</td>
+            <td>{{ entity.casa }}</td>
+            <td>{{ entity.telefonoCasa }}</td>
+            <td>{{ entity.viveCon }}</td>
+            <td>{{ entity.numHermanos }}</td>
+            <td>{{ entity.celCasa }}</td>
+            <td>{{ entity.nomMadre }}</td>
+            <td>{{ entity.ccMadre }}</td>
+            <td>{{ entity.nomPadre }}</td>
+            <td>{{ entity.ccPadre }}</td>
+            <td>{{ entity.nomAcudiente }}</td>
+            <td>{{ entity.ccAcudiente }}</td>
+            <td>{{ entity.direccionCasa }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('dashboard_estudiante_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('dashboard_estudiante_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('dashboard_estudiante_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>

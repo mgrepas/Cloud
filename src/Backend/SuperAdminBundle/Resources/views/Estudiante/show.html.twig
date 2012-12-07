@@ -1,0 +1,145 @@
+<h1>Estudiante</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <td>{{ entity.nombre }}</td>
+        </tr>
+        <tr>
+            <th>Apellidos</th>
+            <td>{{ entity.apellidos }}</td>
+        </tr>
+        <tr>
+            <th>Lugnacimiento</th>
+            <td>{{ entity.lugNacimiento }}</td>
+        </tr>
+        <tr>
+            <th>Fecnacimiento</th>
+            <td>{{ entity.fecNacimiento|date('Y-m-d H:i:s') }}</td>
+        </tr>
+        <tr>
+            <th>Numero</th>
+            <td>{{ entity.numero }}</td>
+        </tr>
+        <tr>
+            <th>Expedidaen</th>
+            <td>{{ entity.expedidaEn }}</td>
+        </tr>
+        <tr>
+            <th>Barrio</th>
+            <td>{{ entity.barrio }}</td>
+        </tr>
+        <tr>
+            <th>Direccion</th>
+            <td>{{ entity.direccion }}</td>
+        </tr>
+        <tr>
+            <th>Telefono</th>
+            <td>{{ entity.telefono }}</td>
+        </tr>
+        <tr>
+            <th>Celular</th>
+            <td>{{ entity.celular }}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{ entity.email }}</td>
+        </tr>
+        <tr>
+            <th>Salud</th>
+            <td>{{ entity.salud }}</td>
+        </tr>
+        <tr>
+            <th>Observacionesper</th>
+            <td>{{ entity.observacionesPer }}</td>
+        </tr>
+        <tr>
+            <th>Colegioprocedencia</th>
+            <td>{{ entity.colegioProcedencia }}</td>
+        </tr>
+        <tr>
+            <th>Sede</th>
+            <td>{{ entity.sede }}</td>
+        </tr>
+        <tr>
+            <th>Observacionesacad</th>
+            <td>{{ entity.observacionesAcad }}</td>
+        </tr>
+        <tr>
+            <th>Numpersonas</th>
+            <td>{{ entity.numPersonas }}</td>
+        </tr>
+        <tr>
+            <th>Casa</th>
+            <td>{{ entity.casa }}</td>
+        </tr>
+        <tr>
+            <th>Telefonocasa</th>
+            <td>{{ entity.telefonoCasa }}</td>
+        </tr>
+        <tr>
+            <th>Vivecon</th>
+            <td>{{ entity.viveCon }}</td>
+        </tr>
+        <tr>
+            <th>Numhermanos</th>
+            <td>{{ entity.numHermanos }}</td>
+        </tr>
+        <tr>
+            <th>Celcasa</th>
+            <td>{{ entity.celCasa }}</td>
+        </tr>
+        <tr>
+            <th>Nommadre</th>
+            <td>{{ entity.nomMadre }}</td>
+        </tr>
+        <tr>
+            <th>Ccmadre</th>
+            <td>{{ entity.ccMadre }}</td>
+        </tr>
+        <tr>
+            <th>Nompadre</th>
+            <td>{{ entity.nomPadre }}</td>
+        </tr>
+        <tr>
+            <th>Ccpadre</th>
+            <td>{{ entity.ccPadre }}</td>
+        </tr>
+        <tr>
+            <th>Nomacudiente</th>
+            <td>{{ entity.nomAcudiente }}</td>
+        </tr>
+        <tr>
+            <th>Ccacudiente</th>
+            <td>{{ entity.ccAcudiente }}</td>
+        </tr>
+        <tr>
+            <th>Direccioncasa</th>
+            <td>{{ entity.direccionCasa }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('dashboard_estudiante') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('dashboard_estudiante_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('dashboard_estudiante_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>

@@ -1,0 +1,16 @@
+<h1>Departamento creation</h1>
+
+<form action="{{ path('dashboard_departamento_create') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <p>
+        <button type="submit">Create</button>
+    </p>
+</form>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('dashboard_departamento') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
