@@ -16,6 +16,7 @@ function doAjax()
                 console.log(titulo);
                 console.log(contenido);
                 console.log(e);
+                $('#aux').remove();
                 $('#ContAjax').html(contenido);
                 window.history.pushState(null, titulo, enlace);
             },

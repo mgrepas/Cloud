@@ -6,7 +6,6 @@ $(document).on("ready", iniciar);
 
 	function animar (dato) {
 		var Identificador = dato.currentTarget.id;
-		console.log(Identificador);
 		ocultar={
 			margin: "120% 0 0 0"
 		}
@@ -19,7 +18,6 @@ $(document).on("ready", iniciar);
 	}
 	function mostrar (dato) {
 		var Identificador = dato.currentTarget.id;
-		console.log(Identificador);
 		mostrar={
 			margin: "70% 0 0 0"
 		}
