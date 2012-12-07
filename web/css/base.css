@@ -8,6 +8,18 @@ h1 {
   font-family: "Champagne";
   font-size: 3em;
 }
+h2 {
+  color: #fff;
+  font-size: 2em;
+}
+h3 {
+  color: #fff;
+  font-size: 1.5em;
+}
+h4 {
+  color: #fff;
+  font-size: 1em;
+}
 h1,
 h2,
 h3,
@@ -17,6 +29,7 @@ h6,
 label,
 p {
   margin: 0;
+  padding: 0;
 }
 @font-face {
   font-family: 'Champagne';
@@ -81,8 +94,9 @@ header {
   vertical-align: top;
 }
 #ContenedorNotf {
-  max-height: 95%;
-  width: 25%;
+  max-height: 100%;
+  overflow: hidden;
+  width: 24%;
 }
 #contReloj {
   margin-bottom: 1.7em;
